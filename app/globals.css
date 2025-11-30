@@ -1,0 +1,394 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+@theme {
+  --breakpoint-sm2: 420px;
+  --breakpoint-sm3: 500px;
+  --breakpoint-sm4: 360px;
+  --breakpoint-sm: 576px;
+  --breakpoint-1md: 800px;
+  --breakpoint-lg: 990px;
+  --breakpoint-1lg: 1030px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-1xl: 1240px;
+  --breakpoint-2xl: 1400px;
+
+  /* Color */
+  --color-defaultText: #525252;
+  /* fbfbfb */
+  --color-defaultBG: #fff;
+  --color-primary: #dee023;
+  --color-primaryHover: #b0df57;
+
+  /* Fonts */
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-linearGradient3color: linear-gradient(
+    to right,
+    #dee023 0%,
+    #b0df57 51%,
+    #dee023 100%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* custom utility */
+.bg-linear3 {
+  background-image: var(--color-linearGradient3color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+  color: #525252;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Animation ------- */
+.nav_manu:hover .nav_manu_text {
+  animation: 0.3s ease 0s 1 normal backwards running toTopFromBottom;
+}
+@keyframes toTopFromBottom {
+  49% {
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+/* Button Icon Animation */
+.button_icon_effect:hover .button_icon {
+  animation: 0.4s ease 0s 1 normal backwards running toLeftFromRight;
+}
+@keyframes toLeftFromRight {
+  49% {
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+/* ``````` */
+.animation_card_topFromBottom:hover .animation_card_topFromBottom_logo {
+  animation: 0.7s ease 0.3s 1 normal backwards running toTopFromBottom;
+}
+@keyframes toTopFromBottom {
+  49% {
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+/* Navbar Style */
+/* Base hidden state */
+.nav_manu_subnav_container {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.7s ease;
+  pointer-events: none;
+}
+
+/* When hover on main nav item */
+.nav_manu:hover .nav_manu_subnav_container {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav_manu:hover .nav_manu_text {
+  color: #b0df57 !important;
+}
+.nav_manu:hover .nav_manu_text_icon {
+  color: #b0df57 !important;
+}
+
+/* Navbar SabNav Hover Effect */
+.nav_manu_subnav_hover_effect {
+  width: 0px;
+  transition: width 0.3s ease; /* Smooth both on hover and on leave */
+  overflow: hidden; /* optional, in case of text inside */
+  margin-right: 5px;
+}
+.nav_manu_subnav:hover {
+  background: #f3f3f3;
+  color: #b0df57;
+}
+.nav_manu_subnav:hover .nav_manu_subnav_text_icon {
+  color: #b0df57 !important;
+}
+
+.nav_manu_subnav:hover .nav_manu_subnav_hover_effect {
+  width: 10px;
+}
+
+/* Second Sub  */
+.nav_manu_secondsubnav_container {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.7s ease;
+  pointer-events: none;
+}
+/* When hover on main nav item */
+.nav_manu_subnav:hover .nav_manu_secondsubnav_container {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Navbar Second SabNav Hover Effect */
+.nav_manu_second_subnav_hover_effect {
+  width: 0px;
+  transition: width 0.3s ease; /* Smooth both on hover and on leave */
+  overflow: hidden; /* optional, in case of text inside */
+  margin-right: 5px;
+}
+.nav_manu_second_subnav:hover {
+  background: #f3f3f3;
+  color: #b0df57;
+}
+
+.nav_manu_second_subnav:hover .nav_manu_second_subnav_hover_effect {
+  width: 10px;
+}
+
+
+
+
+
+
+
+/* Sticky Navbar Animation */
+.StickyNavbarAnimation {
+  animation: stickyNavbarAnimation_Transition 0.8s forwards;
+}
+@keyframes stickyNavbarAnimation_Transition {
+  0% {
+    transform: translateY(-90px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*! Home _ Page --- Banner --- Section */
+.Image-Transform-Animation1 {
+  animation: mainImageTransfromAnimation 3s infinite alternate;
+}
+@keyframes mainImageTransfromAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+.Image-Transform-Animation2 {
+  animation: mainImageTransfromAnimation2 3s infinite alternate;
+}
+@keyframes mainImageTransfromAnimation2 {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+.Image-Transform-Animation3 {
+  animation: mainImageTransfromAnimation3 3s infinite alternate;
+}
+@keyframes mainImageTransfromAnimation3 {
+  0% {
+    transform: translate(0, 0px); /* Start */
+  }
+  10% {
+    transform: translate(0, 0px); /* Start */
+  }
+  50% {
+    transform: translate(0, -6px); /* Go up */
+  }
+  100% {
+    transform: translate(-8px, -5px); /* Go left */
+  }
+  /* 100% {
+  } */
+}
+/* transform: translate(0, -20px); */
+
+/*! Home _ Page --- Our Work Flow --- Section */
+.OWF_Card_Hover {
+  animation: owf_card_hover_effect 4s linear infinite;
+  animation-play-state: paused;
+  transition: animation-play-state 0.5s ease-out;
+}
+.OWF_Card:hover .OWF_Card_Hover {
+  animation-play-state: running;
+}
+@keyframes owf_card_hover_effect {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.OWF_Card_Logo_Color {
+  color: var(--box-color);
+}
+.OWF_Card:hover .OWF_Card_Logo_Color {
+  color: white !important;
+}
+.OWF_Card:hover .OWF_Card_BG_Color {
+  background-color: var(--box-bg);
+}
+
+/*! Home _ Page --- Team --- Section */
+.my-bullet {
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 25px;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.my-bullet-active {
+  width: 30px;
+  height: 8px;
+  background: #dee023; /* Active color */
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*! Home _ Page --- Portfolio --- Section */
+.Portfolio_Card:hover .Portfolio_Card_Info {
+  opacity: 1;
+}
+
+.Portfolio_Card:hover .P_Card_Info_Icon {
+  right: 20px;
+  top: 20px;
+  opacity: 100;
+}
+@media only screen and (max-width: 360px) {
+  .Portfolio_Card:hover .P_Card_Info_Icon {
+    right: 15px;
+    top: 15px;
+    opacity: 100;
+  }
+}
+
+.Portfolio_Card:hover .P_Card_Info_Title {
+  bottom: 0 !important;
+  opacity: 100 !important;
+}
+
+/*! Company History _ Page --- Main --- Section */
+/* Rotate Animation */
+.CH-TheEndImage-Rotate-Animation {
+  animation-name: rotateBounce;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: 50% 0%;
+}
+@keyframes rotateBounce {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Horizontal Animation */
+.CH-RocketImage-Horizontal-Animation {
+  animation: horizontal_rocket_animation 4.5s ease-in-out infinite;
+}
+@keyframes horizontal_rocket_animation {
+  /* First cycle */
+  0% {
+    transform: translateY(0px);
+  }
+  8.33% {
+    transform: translateY(20px);
+  }
+  16.66% {
+    transform: translateY(0px);
+  }
+
+  /* Second cycle */
+  25% {
+    transform: translateY(20px);
+  }
+  33.33% {
+    transform: translateY(0px);
+  }
+
+  /* Third cycle */
+  41.66% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+
+  /* ✅ Pause — no movement for 3 seconds */
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*! Blog Grid _ Page --- Main --- Section */
+/* Blog Card Multiple Image */
+.swiper-pagination-bullet {
+  background: #000 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #dee023 !important;
+}
