@@ -183,16 +183,9 @@ body {
   background: #f3f3f3;
   color: #b0df57;
 }
-
 .nav_manu_second_subnav:hover .nav_manu_second_subnav_hover_effect {
   width: 10px;
 }
-
-
-
-
-
-
 
 /* Sticky Navbar Animation */
 .StickyNavbarAnimation {
@@ -208,187 +201,48 @@ body {
 }
 
 /*! Home _ Page --- Banner --- Section */
-.Image-Transform-Animation1 {
-  animation: mainImageTransfromAnimation 3s infinite alternate;
+/* banner_caption_img1
+banner_caption_img2
+banner_main_img1
+banner_main_img2 */
+
+.banner_main_img1{
+  animation: bannerMainImageAnimation 1.2s forwards;
 }
-@keyframes mainImageTransfromAnimation {
+.banner_main_img2{
+  animation: bannerMainImageAnimation 1.2s forwards;
+}
+@keyframes bannerMainImageAnimation {
   0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   100% {
-    transform: rotate(3deg);
+    opacity: 10;
   }
 }
-.Image-Transform-Animation2 {
-  animation: mainImageTransfromAnimation2 3s infinite alternate;
+.banner_caption_img1{
+  animation: bannerCaptionAnimation1 1.2s forwards;
 }
-@keyframes mainImageTransfromAnimation2 {
+@keyframes bannerCaptionAnimation1 {
   0% {
-    transform: translateY(-5px);
+    opacity: 0;
+    transform: translateX(-90px);
   }
   100% {
-    transform: translateY(8px);
-  }
-}
-.Image-Transform-Animation3 {
-  animation: mainImageTransfromAnimation3 3s infinite alternate;
-}
-@keyframes mainImageTransfromAnimation3 {
-  0% {
-    transform: translate(0, 0px); /* Start */
-  }
-  10% {
-    transform: translate(0, 0px); /* Start */
-  }
-  50% {
-    transform: translate(0, -6px); /* Go up */
-  }
-  100% {
-    transform: translate(-8px, -5px); /* Go left */
-  }
-  /* 100% {
-  } */
-}
-/* transform: translate(0, -20px); */
-
-/*! Home _ Page --- Our Work Flow --- Section */
-.OWF_Card_Hover {
-  animation: owf_card_hover_effect 4s linear infinite;
-  animation-play-state: paused;
-  transition: animation-play-state 0.5s ease-out;
-}
-.OWF_Card:hover .OWF_Card_Hover {
-  animation-play-state: running;
-}
-@keyframes owf_card_hover_effect {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.OWF_Card_Logo_Color {
-  color: var(--box-color);
-}
-.OWF_Card:hover .OWF_Card_Logo_Color {
-  color: white !important;
-}
-.OWF_Card:hover .OWF_Card_BG_Color {
-  background-color: var(--box-bg);
-}
-
-/*! Home _ Page --- Team --- Section */
-.my-bullet {
-  width: 8px;
-  height: 8px;
-  background: #000;
-  border-radius: 25px;
-  opacity: 0.2;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.my-bullet-active {
-  width: 30px;
-  height: 8px;
-  background: #dee023; /* Active color */
-  opacity: 1;
-  cursor: pointer;
-}
-
-/*! Home _ Page --- Portfolio --- Section */
-.Portfolio_Card:hover .Portfolio_Card_Info {
-  opacity: 1;
-}
-
-.Portfolio_Card:hover .P_Card_Info_Icon {
-  right: 20px;
-  top: 20px;
-  opacity: 100;
-}
-@media only screen and (max-width: 360px) {
-  .Portfolio_Card:hover .P_Card_Info_Icon {
-    right: 15px;
-    top: 15px;
-    opacity: 100;
-  }
-}
-
-.Portfolio_Card:hover .P_Card_Info_Title {
-  bottom: 0 !important;
-  opacity: 100 !important;
-}
-
-/*! Company History _ Page --- Main --- Section */
-/* Rotate Animation */
-.CH-TheEndImage-Rotate-Animation {
-  animation-name: rotateBounce;
-  animation-delay: 3s;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  transform-origin: 50% 0%;
-}
-@keyframes rotateBounce {
-  0% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(-10deg);
-  }
-}
-
-/* Horizontal Animation */
-.CH-RocketImage-Horizontal-Animation {
-  animation: horizontal_rocket_animation 4.5s ease-in-out infinite;
-}
-@keyframes horizontal_rocket_animation {
-  /* First cycle */
-  0% {
-    transform: translateY(0px);
-  }
-  8.33% {
-    transform: translateY(20px);
-  }
-  16.66% {
-    transform: translateY(0px);
-  }
-
-  /* Second cycle */
-  25% {
-    transform: translateY(20px);
-  }
-  33.33% {
-    transform: translateY(0px);
-  }
-
-  /* Third cycle */
-  41.66% {
-    transform: translateY(20px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-
-  /* ✅ Pause — no movement for 3 seconds */
-  100% {
+    opacity: 10;
     transform: translateY(0px);
   }
 }
-
-/*! Blog Grid _ Page --- Main --- Section */
-/* Blog Card Multiple Image */
-.swiper-pagination-bullet {
-  background: #000 !important;
+.banner_caption_img2{
+  animation: bannerCaptionAnimation2 1.2s forwards;
 }
-.swiper-pagination-bullet-active {
-  background: #dee023 !important;
+@keyframes bannerCaptionAnimation2 {
+  0% {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  100% {
+    opacity: 10;
+    transform: translateY(0px);
+  }
 }

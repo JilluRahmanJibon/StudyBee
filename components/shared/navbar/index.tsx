@@ -225,7 +225,7 @@ const Navbar = () => {
                 src={"/assets/icons/studybee_b.png"}
                 width={320}
                 height={73}
-                className="w-[158px] h-auto"
+                className="w-[148px] h-auto"
                 alt=""
               />
             </div>
@@ -290,9 +290,19 @@ const Navbar = () => {
                     <ul
                       className={`absolute left-0 ${
                         isSticky ? "top-[90px]" : "xl:top-[132px] top-[90px]"
-                      } w-[200px] py-[5px] 
+                      } w-[200px] ${
+                        nav?.subNav &&
+                        nav?.subNav?.length > 7 &&
+                        "h-[307px] min-h-[307px] overflow-y-auto"
+                      } py-[5px] 
                     ${nav?.subNav ? "lg:flex hidden" : "hidden"}
-                     flex-col bg-defaultBG shadow-[0px_2px_5px_#7c7c7c27] nav_manu_subnav_container`}
+                     flex-col bg-defaultBG shadow-[0px_2px_5px_#7c7c7c27] 
+                      [&::-webkit-scrollbar]:w-1.5
+                    [&::-webkit-scrollbar-track]:bg-gray-100
+                    [&::-webkit-scrollbar-thumb]:bg-gray-300
+                    dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+                    dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+                    [&::-webkit-scrollbar-thumb:hover]:cursor-default nav_manu_subnav_container`}
                     >
                       {/* Sub Nav Item */}
                       {nav?.subNav?.map((sNav) => {
@@ -332,7 +342,7 @@ const Navbar = () => {
                                   secondSubActive
                                     ? "text-primaryHover! bg-[#f3f3f3]!"
                                     : "text-defaultText"
-                                } relative nav_manu_subnav`}
+                                }relative nav_manu_subnav`}
                               >
                                 <div className="w-full flex items-center">
                                   <div className="w-fit h-full flex items-center">
@@ -354,11 +364,21 @@ const Navbar = () => {
 
                                 {/* Second Sub Nev */}
                                 <ul
-                                  className={`absolute left-[200px] top-[5px] w-[200px] py-[5px] bg-defaultBG shadow-[0px_2px_5px_#7c7c7c27] ${
+                                  className={`absolute left-[200px] top-[5px] w-[200px] ${
+                                    sNav?.secondSubNav &&
+                                    sNav?.secondSubNav?.length > 7 &&
+                                    "h-[307px] min-h-[307px] overflow-y-auto"
+                                  } py-[5px] bg-defaultBG shadow-[0px_2px_5px_#7c7c7c27] ${
                                     sNav?.secondSubNav
                                       ? "lg:flex hidden"
                                       : "hidden"
-                                  } flex-col nav_manu_secondsubnav_container`}
+                                  } flex-col 
+                                  [&::-webkit-scrollbar]:w-1.5
+                                [&::-webkit-scrollbar-track]:bg-gray-100
+                                [&::-webkit-scrollbar-thumb]:bg-gray-300
+                                dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+                                dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+                                [&::-webkit-scrollbar-thumb:hover]:cursor-default nav_manu_secondsubnav_container`}
                                 >
                                   {sNav?.secondSubNav?.map((secondSub) => {
                                     return (
@@ -402,7 +422,7 @@ const Navbar = () => {
             </ul>
 
             <Button
-              text="Get A Quote"
+              text="Join Free Courses"
               link=""
               padding="lg:p-[14px_37px] md:p-[12px_30px] p-[9px_20px]"
               customClassName="sm:w-fit w-full ml-5 sm:flex hidden"
@@ -444,7 +464,9 @@ const Navbar = () => {
         }`}
       >
         <div className="relative w-full h-full">
-          <div className="w-[280px] h-full absolute left-0 top-0 z-51 bg-defaultBG shadow-[3px_0px_30px_0px_#272c2f] overflow-y-auto">
+          <div
+            className={`w-[280px] h-full absolute left-0 top-0 z-51 bg-defaultBG shadow-[3px_0px_30px_0px_#272c2f] overflow-y-auto`}
+          >
             <div className="sm:py-2.5 py-[5px]">
               <div className="sm:w-40 w-[130px] h-auto relative m-[25px_20px]">
                 <Image
@@ -544,7 +566,7 @@ const Navbar = () => {
                     >
                       {mNav?.subNav?.map((subN) => {
                         return (
-                          <div>
+                          <div key={subN.id}>
                             {subN?.link ? (
                               <>
                                 <div
@@ -554,7 +576,6 @@ const Navbar = () => {
                                 ></div>
                                 <Link
                                   href={subN?.link ? subN?.link : ""}
-                                  key={subN.id}
                                   onClick={() => {
                                     setMobileNav(!mobileNav);
                                     handleActiveLinks();
@@ -663,7 +684,6 @@ const Navbar = () => {
                                     href={
                                       secondSub?.link ? secondSub?.link : ""
                                     }
-                                    key={secondSub.id}
                                     onClick={() => {
                                       setMobileNav(!mobileNav);
                                       handleActiveLinks();

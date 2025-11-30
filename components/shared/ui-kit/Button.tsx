@@ -22,8 +22,8 @@ const Button: React.FC<ButtonProps> = ({
   bgLinearGradient = false,
   border = "p-[2px]",
   borderLinearGradient = false,
-  padding = "xl:p-[14px_37px] md:p-[14px_30px] sm3:p-[10px_14px] p-[9px_13px]",
-  borderLinearGradientPadding = "xl:p-[12px_35px] md:p-[12px_28px] sm3:p-[8px_12px] p-[7px_11px]",
+  padding = "xl:p-[14px_37px] md:p-[14px_30px] p-[10px_14px]",
+  borderLinearGradientPadding = "xl:p-[12px_35px] md:p-[12px_28px] p-[8px_12px]",
 }) => {
   return (
     <>
