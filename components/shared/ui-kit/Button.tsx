@@ -12,6 +12,7 @@ interface ButtonProps {
   borderLinearGradient?: boolean;
   borderLinearGradientPadding?: string;
   rightIcon?: boolean;
+  customTextSize?: string;
 }
 const Button: React.FC<ButtonProps> = ({
   text = "Button",
@@ -24,6 +25,7 @@ const Button: React.FC<ButtonProps> = ({
   borderLinearGradient = false,
   padding = "xl:p-[14px_37px] md:p-[14px_30px] p-[10px_14px]",
   borderLinearGradientPadding = "xl:p-[12px_35px] md:p-[12px_28px] p-[8px_12px]",
+  customTextSize = "md:text-[14px] sm3:text-[13px] text-[12px]"
 }) => {
   return (
     <>
@@ -32,7 +34,7 @@ const Button: React.FC<ButtonProps> = ({
         href={`${link}`}
         className={`${
           link ? "" : "hidden!"
-        } ${customClassName} justify-center items-center md:text-[14px] sm3:text-[13px] text-[12px]  ${
+        } ${customClassName} justify-center items-center ${customTextSize} ${
           bgLinearGradient
             ? `bg-linear3 bg-size-[200%] bg-left hover:bg-right text-white! ${padding}`
             : borderLinearGradient
@@ -63,7 +65,7 @@ const Button: React.FC<ButtonProps> = ({
         onClick={onClick}
         className={`${
           link ? "hidden!" : ""
-        } justify-center items-center md:text-[14px] sm3:text-[13px] text-[12px] ${customClassName} ${
+        } justify-center items-center ${customTextSize} ${customClassName} ${
           bgLinearGradient
             ? `bg-linear3 bg-size-[200%] bg-left hover:bg-right text-white! ${padding}`
             : borderLinearGradient
