@@ -424,7 +424,7 @@ const Navbar = () => {
             <Button
               text="Join Free Courses"
               link=""
-              padding="lg:p-[14px_37px] md:p-[12px_30px] p-[9px_20px]"
+              padding="xl:p-[14px_37px]! lg:p-[14px_16px]! md:p-[12px_30px] p-[9px_20px]"
               customClassName="sm:w-fit w-full ml-5 sm:flex hidden"
               bgLinearGradient={true}
             />
@@ -601,9 +601,7 @@ const Navbar = () => {
                                   </li>
                                 </Link>
                                 <div
-                                  className={`w-full h-px bg-[#838383] opacity-[0.1] ${
-                                    subNavLenght === subN.id ? "hidden" : ""
-                                  }`}
+                                  className={`w-full h-px bg-[#838383] opacity-[0.1] `}
                                 ></div>
                               </>
                             ) : (
