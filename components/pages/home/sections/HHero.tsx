@@ -43,7 +43,7 @@ const HHero = () => {
   }, []);
 
   return (
-    <div className="relative mb-[200px]">
+    <div className="relative xl:mb-[170px] lg:mb-[130px] sm:mb-[200px] sm2:mb-[120px] mb-[70px]">
       {/* Main Contant */}
       <section className="xl:w-[1199px]! lg:w-[960px]! md:w-[720px] sm:w-[510px] w-full mx-auto h-auto px-[15px] 2xl:pt-[50px]! lg:pt-10! sm:pt-[30px] pt-5 flex lg:flex-row flex-wrap justify-between lg:items-start items-center font-poppins! sm:pb-0 pb-[30px]">
         <div className="lg:w-[50%] w-full lg:pb-0 sm:pb-[50px] pb-10">
@@ -109,7 +109,7 @@ const HHero = () => {
           </div>
 
           <div
-            className={`md:w-[45%] w-[258px] h-auto ${
+            className={`md:w-[45%] w-[258px] xl:h-[370px] lg:h-[290px] md:h-[430px] sm3:h-[305px] h-auto ${
               showAnimationInBannerImage ? "banner_main_img1" : ""
             } lg:translate-y-[82px] md:translate-y-[100px] sm3:translate-y-[73px] sm2:translate-y-[53px] sm4:translate-y-[33px] translate-y-[23px] relative z-0`}
           >

@@ -341,8 +341,8 @@ const Navbar = () => {
                                 className={`text-[15px] font-medium p-[10px_25px] relative transition flex items-center justify-between ${
                                   secondSubActive
                                     ? "text-primaryHover! bg-[#f3f3f3]!"
-                                    : "text-defaultText"
-                                }relative nav_manu_subnav`}
+                                    : "text-defaultText!"
+                                } relative nav_manu_subnav`}
                               >
                                 <div className="w-full flex items-center">
                                   <div className="w-fit h-full flex items-center">
