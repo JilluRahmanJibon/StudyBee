@@ -46,8 +46,8 @@ const Button: React.FC<ButtonProps> = ({
         <div
           className={`${
             borderLinearGradient &&
-            `w-full h-full bg-white group-hover:bg-transparent rounded-[15px] ${borderLinearGradientPadding}`
-          } flex items-center justify-center transition-all duration-500 uppercase`}
+            `bg-white group-hover:bg-transparent rounded-[15px] ${borderLinearGradientPadding}`
+          } w-full h-full flex items-center justify-center transition-all duration-500 uppercase`}
         >
           {text}
           <div
@@ -77,8 +77,8 @@ const Button: React.FC<ButtonProps> = ({
         <div
           className={`${
             borderLinearGradient &&
-            `w-full h-full bg-white group-hover:bg-transparent rounded-[15px] ${borderLinearGradientPadding}`
-          } flex items-center justify-center transition-all duration-500 uppercase`}
+            `bg-white group-hover:bg-transparent rounded-[15px] ${borderLinearGradientPadding}`
+          } w-full h-full flex items-center justify-center transition-all duration-500 uppercase`}
         >
           {text}
           <div

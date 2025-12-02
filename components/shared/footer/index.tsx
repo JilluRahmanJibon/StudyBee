@@ -60,7 +60,7 @@ const Footer = () => {
   ];
   return (
     <div>
-      <div
+      {/* <div
         className="w-full py-10 relative"
         style={{
           background: "url('/assets/images/Footer/footer_top_bg.jpg')",
@@ -83,8 +83,17 @@ const Footer = () => {
             />
           </div>
         </div>
-      </div>
-      <div className="relative bg-[#110f0f]">
+      </div> */}
+      <div
+        className="relative"
+        style={{
+          background: "url('/assets/images/footer_bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "#110f0f",
+        }}
+      >
         <footer className="xl:w-[1199px]! lg:w-[960px]! md:w-[720px] sm:w-[510px] w-full items-center mx-auto md:p-[70px_0_30px] p-[50px_0_20px]">
           <div className="flex flex-wrap justify-between text-left">
             <div className="xl:w-1/4! lg:w-[33.33333%]! sm:w-[50%] w-full md:px-[15px]! sm:px-0 px-[15px] pb-[30px]">
