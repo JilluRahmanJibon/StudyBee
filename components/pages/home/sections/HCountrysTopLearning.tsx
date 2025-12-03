@@ -44,7 +44,7 @@ const HCountrysTopLearning = () => {
 
   return (
     <div>
-      <div className="xl:w-[1199px]! lg:w-[960px]! md:w-[720px] sm:w-[510px] w-full mx-auto h-auto px-[15px] xl:pt-[70px] md:pt-[30px] pt-0 flex lg:flex-row flex-col lg:justify-between justify-center font-poppins! lg:pb-[85px] pb-[50px]">
+      <div className="xl:w-[1199px]! lg:w-[960px]! md:w-[720px] sm:w-[510px] w-full mx-auto h-auto px-[15px] xl:pt-[70px]! md:pt-[30px] pt-0 flex lg:flex-row flex-col lg:justify-between justify-center font-poppins! lg:pb-[85px] pb-[50px]">
         <div className="lg:w-1/2 w-full lg:pr-[30px] pr-0">
           <h1 className="xl:text-[37px] md:text-[35px] sm3:text-[28px] text-[21px] text-black! font-bold font-poppins leading-[1.4] mb-[7px]">
             Country’s top learning and<br className="hidden"/> education platform

@@ -141,7 +141,7 @@ const HTestimonial: React.FC<HTestimonialProps> = ({ pageName }) => {
             ))}
           </Swiper>
           {/* ✅ Custom Navigation Buttons */}
-          <div className="flex justify-center sm2:gap-5 gap-3 sm2:mt-5 mt-[10px]">
+          <div className="flex justify-center sm2:gap-5 gap-3 sm2:mt-5 mt-2.5">
             <button
               onClick={() => setIsExpanded("")}
               className="custom-prev bg-white hover:bg-primary text-primary hover:text-white sm2:w-[45px] w-[39px] sm2:h-[45px] h-[39px] rounded-full flex items-center justify-center shadow-[1px_0_20px_#0000001a] cursor-pointer transition-all duration-500"

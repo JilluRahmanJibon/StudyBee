@@ -13,19 +13,21 @@ interface ButtonProps {
   borderLinearGradientPadding?: string;
   rightIcon?: boolean;
   customTextSize?: string;
+  customIconSize?: string;
 }
 const Button: React.FC<ButtonProps> = ({
   text = "Button",
   link,
   onClick,
   rightIcon = true,
-  customClassName = 'flex',
+  customClassName = "flex",
   bgLinearGradient = false,
   border = "p-[2px]",
   borderLinearGradient = false,
   padding = "xl:p-[14px_37px] md:p-[14px_30px] p-[10px_14px]",
   borderLinearGradientPadding = "xl:p-[12px_35px] md:p-[12px_28px] p-[8px_12px]",
-  customTextSize = "md:text-[14px] sm3:text-[13px] text-[12px]"
+  customTextSize = "md:text-[14px] sm3:text-[13px] text-[12px]",
+  customIconSize = "sm3:text-[17px] text-[13px]",
 }) => {
   return (
     <>
@@ -55,7 +57,9 @@ const Button: React.FC<ButtonProps> = ({
               rightIcon ? "" : "hidden"
             }`}
           >
-            <FaAngleRight className="sm3:text-[17px] text-[13px] sm3:mt-0 mt-0.5 button_icon" />
+            <FaAngleRight
+              className={`${customIconSize} sm3:mt-0 mt-0.5 button_icon`}
+            />
           </div>
         </div>
       </Link>
@@ -69,7 +73,7 @@ const Button: React.FC<ButtonProps> = ({
           bgLinearGradient
             ? `bg-linear3 bg-size-[200%] bg-left hover:bg-right text-white! ${padding}`
             : borderLinearGradient
-            ? `bg-linear3 bg-size-[200%] bg-left hover:bg-right text-black! hover:text-white! p-0.5 group`
+            ? `bg-linear3 bg-size-[200%] bg-left hover:bg-right text-black! hover:text-white! ${border} group`
             : `bg-primary ${padding}`
         }  font-medium rounded-2xl cursor-pointer leading-6 transition-all duration-500 button_icon_effect`}
       >
@@ -86,7 +90,9 @@ const Button: React.FC<ButtonProps> = ({
               rightIcon ? "" : "hidden"
             }`}
           >
-            <FaAngleRight className="sm3:text-[17px] text-[13px] sm3:mt-0 mt-0.5 button_icon" />
+            <FaAngleRight
+              className={`${customIconSize} sm3:mt-0 mt-0.5 button_icon`}
+            />
           </div>
         </div>
       </button>

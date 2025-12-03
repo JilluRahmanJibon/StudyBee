@@ -24,6 +24,7 @@ const HLearningPlatform = () => {
         >
           {LearningPlatformData.map((item) => (
             <Image
+              key={item.id}
               src={`/assets/images/Home_Page/LearningPlatform/${item.img}`}
               width={249}
               height={141}
@@ -38,6 +39,7 @@ const HLearningPlatform = () => {
         >
           {LearningPlatformData.map((item) => (
             <Image
+              key={item.id}
               src={`/assets/images/Home_Page/LearningPlatform/${item.img}`}
               width={249}
               height={141}
@@ -52,6 +54,7 @@ const HLearningPlatform = () => {
         >
           {LearningPlatformData.map((item) => (
             <Image
+              key={item.id}
               src={`/assets/images/Home_Page/LearningPlatform/${item.img}`}
               width={249}
               height={141}
