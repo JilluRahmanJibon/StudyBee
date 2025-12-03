@@ -109,7 +109,7 @@ const HHero = () => {
           </div>
 
           <div
-            className={`md:w-[45%] w-[258px] xl:h-[370px] lg:h-[290px] md:h-[430px] sm3:h-[305px] h-auto ${
+            className={`md:w-[45%] w-[258px] h-auto ${
               showAnimationInBannerImage ? "banner_main_img1" : ""
             } lg:translate-y-[82px] md:translate-y-[100px] sm3:translate-y-[73px] sm2:translate-y-[53px] sm4:translate-y-[33px] translate-y-[23px] relative z-0`}
           >
