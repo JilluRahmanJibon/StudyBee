@@ -1,4 +1,5 @@
 import HCountrysTopLearning from "./sections/HCountrysTopLearning";
+import HHaveALookAtOurEvents from "./sections/HHaveALookAtOurEvents";
 import HHero from "./sections/HHero";
 import HLearningPlatform from "./sections/HLearningPlatform";
 import HLimitlessEducationMaterial from "./sections/HLimitlessEducationMaterial";
@@ -11,6 +12,7 @@ const Home = () => {
       <HHero />
       <HLimitlessEducationMaterial />
       <HCountrysTopLearning />
+      <HHaveALookAtOurEvents />
       <HLearningPlatform />
       <HTestimonial />
       <HOurOtherBranches />

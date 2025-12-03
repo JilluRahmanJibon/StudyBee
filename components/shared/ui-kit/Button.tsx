@@ -14,6 +14,7 @@ interface ButtonProps {
   rightIcon?: boolean;
   customTextSize?: string;
   customIconSize?: string;
+  uppercase?: boolean;
 }
 const Button: React.FC<ButtonProps> = ({
   text = "Button",
@@ -28,6 +29,7 @@ const Button: React.FC<ButtonProps> = ({
   borderLinearGradientPadding = "xl:p-[12px_35px] md:p-[12px_28px] p-[8px_12px]",
   customTextSize = "md:text-[14px] sm3:text-[13px] text-[12px]",
   customIconSize = "sm3:text-[17px] text-[13px]",
+  uppercase = true,
 }) => {
   return (
     <>
@@ -49,7 +51,9 @@ const Button: React.FC<ButtonProps> = ({
           className={`${
             borderLinearGradient &&
             `bg-white group-hover:bg-transparent rounded-[15px] ${borderLinearGradientPadding}`
-          } w-full h-full flex items-center justify-center transition-all duration-500 uppercase`}
+          } w-full h-full flex items-center justify-center transition-all duration-500 ${
+            uppercase && "uppercase"
+          } `}
         >
           {text}
           <div
@@ -58,7 +62,7 @@ const Button: React.FC<ButtonProps> = ({
             }`}
           >
             <FaAngleRight
-              className={`${customIconSize} sm3:mt-0 mt-0.5 button_icon`}
+              className={`${customIconSize} sm3:mt-0 mt-0.5 button_icon transition-all duration-500`}
             />
           </div>
         </div>
@@ -82,7 +86,9 @@ const Button: React.FC<ButtonProps> = ({
           className={`${
             borderLinearGradient &&
             `bg-white group-hover:bg-transparent rounded-[15px] ${borderLinearGradientPadding}`
-          } w-full h-full flex items-center justify-center transition-all duration-500 uppercase`}
+          } w-full h-full flex items-center justify-center transition-all duration-500 ${
+            uppercase && "uppercase"
+          }`}
         >
           {text}
           <div
@@ -91,7 +97,7 @@ const Button: React.FC<ButtonProps> = ({
             }`}
           >
             <FaAngleRight
-              className={`${customIconSize} sm3:mt-0 mt-0.5 button_icon`}
+              className={`${customIconSize} sm3:mt-0 mt-0.5 button_icon transition-all duration-500`}
             />
           </div>
         </div>
