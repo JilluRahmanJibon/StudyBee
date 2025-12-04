@@ -1,5 +1,6 @@
 import HBrands from "./sections/HBrands";
 import HCountrysTopLearning from "./sections/HCountrysTopLearning";
+import HGoogleMap from "./sections/HGoogleMap";
 import HHaveALookAtOurEvents from "./sections/HHaveALookAtOurEvents";
 import HHero from "./sections/HHero";
 import HLearningPlatform from "./sections/HLearningPlatform";
@@ -19,6 +20,7 @@ const Home = () => {
       <HLearningPlatform />
       <HTestimonial />
       <HOurPartners />
+      <HGoogleMap />
       <HOurOtherBranches />
     </div>
   );

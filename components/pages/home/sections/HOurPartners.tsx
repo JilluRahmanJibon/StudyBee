@@ -30,7 +30,7 @@ const HOurPartners = () => {
   ];
   return (
     <div>
-      <div className="xl:w-[1199px]! lg:w-[960px]! md:w-[720px] sm:w-[510px] w-full mx-auto sm:px-0 px-[15px] pt-[50px] sm2:pb-[50px] pb-[30px]">
+      <div className="xl:w-[1199px]! lg:w-[960px]! md:w-[720px] sm:w-[510px] w-full mx-auto sm:px-0 px-[15px] pt-[50px] sm2:pb-[70px] pb-[30px]">
         <div
           className={`w-full flex justify-center text-center font-poppins xl:mb-10 sm2:mb-[30px] mb-[15px]`}
         >
