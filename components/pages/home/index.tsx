@@ -4,6 +4,7 @@ import HHero from "./sections/HHero";
 import HLearningPlatform from "./sections/HLearningPlatform";
 import HLimitlessEducationMaterial from "./sections/HLimitlessEducationMaterial";
 import HOurOtherBranches from "./sections/HOurOtherBranches";
+import HOurPartners from "./sections/HOurPartners";
 import HTestimonial from "./sections/HTestimonial";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <HHaveALookAtOurEvents />
       <HLearningPlatform />
       <HTestimonial />
+      <HOurPartners />
       <HOurOtherBranches />
     </div>
   );
