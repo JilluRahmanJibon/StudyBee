@@ -1,3 +1,4 @@
+import HBrands from "./sections/HBrands";
 import HCountrysTopLearning from "./sections/HCountrysTopLearning";
 import HHaveALookAtOurEvents from "./sections/HHaveALookAtOurEvents";
 import HHero from "./sections/HHero";
@@ -12,6 +13,7 @@ const Home = () => {
     <div>
       <HHero />
       <HLimitlessEducationMaterial />
+      <HBrands />
       <HCountrysTopLearning />
       <HHaveALookAtOurEvents />
       <HLearningPlatform />
